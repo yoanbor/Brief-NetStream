@@ -1,0 +1,36 @@
+# version de docker
+version: "3.8"
+
+# les services (ici postgres qui va de mise avec pgadmin)
+services:
+# La Database nommée "db" 
+  db:
+  # l'image de postgres qui donne aussi la version utilisée (ici la 16)
+    image: postgres:16
+    container_name: postgres_container
+    restart: always
+    # l'environnement est adapté à ce qui est requis de base pour postgres ici
+    # mais change en fonction de si tu passes à un autre type de bdd
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpass
+      POSTGRES_DB: NetStream
+      # les ports à modifier en fonction de ceux disponibles ou réservés
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgres/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pg-admin:
+    image: dpage/pgadmin4:8.1
+    container_name: pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      PGADMIN_DEFAULT_PASSWORD: adminpass
+      PGADMIN_LISTEN_PORT: 5050
+    ports:
+      - "5050:5050"
+
+volumes:
+  pg_data:
