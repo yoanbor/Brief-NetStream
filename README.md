@@ -17,8 +17,8 @@ Vous pouvez désormais ouvrir votre naviguateur et aller sur http://localhost:50
 
 Pour se connecter, le mail est "admin@email.com" et le mot de passe est "adminpass".
 
-Une fois connecté, cliquez sur "créer un nouveau serveur",
-donnez lui un nom puis aller dans l'onglet "connexion" pour mettre en nom "db", en utilisateur "dbuser" et en mot de passe "dbpass" puis cliquez sur "save".
+Une fois connecté, cliquez sur "Ajouter un nouveau serveur",
+donnez lui un nom puis aller dans l'onglet "Connexion" pour mettre en nom "db", en utilisateur "dbuser" et en mot de passe "dbpass" puis cliquez sur "enregistrer".
 
 Vous pouvez maintenat ouvrir le serveur que vous avez nommé où se trouvera la base de donnée nommée "NetStream" !
 
@@ -46,7 +46,7 @@ Pour modifier un film :
 ```sql
 UPDATE movies
 SET title_movie = 'Star Treck'
-WHERE id = 1;
+WHERE id_movie = 1;
 ```
 
 Pour ajouter un film :

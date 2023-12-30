@@ -105,9 +105,6 @@ VALUES
     ('Star Wars: Episode III - Revenge of the Sith', '2:20:00', '2005-05-19', (SELECT id_director FROM directors
   WHERE firstname_director = 'George'
   AND name_director = 'Lucas') ),
-    ('Star Wars: The Force Awakens', '2:18:00', '2015-12-18', (SELECT id_director FROM directors
-  WHERE firstname_director = 'George'
-  AND name_director = 'Lucas') ),
     ('Star Wars: The Last Jedi', '2:32:00', '2017-12-15', (SELECT id_director FROM directors
   WHERE firstname_director = 'George'
   AND name_director = 'Lucas') ),
