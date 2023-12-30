@@ -9,16 +9,21 @@ https://chambray-armchair-216.notion.site/Briefs-NetStream-6de89c48080b43f6aa259
 
 ## Pour commencer :
 
-Commencer par cloner le repo git,
-Créer ensuite un terminal au clone et lancer à l'aide de la commande : "docker compose up"
+Commencer par cloner le repo git.
+
+Créer ensuite un terminal au clone et lancer à l'aide de la commande : "docker compose up".
+
 Vous pouvez désormais ouvrir votre naviguateur et aller sur http://localhost:5050/ afin de lancer pgadmin.
 
 Pour se connecter, le mail est "admin@email.com" et le mot de passe est "adminpass".
-Une fois connecté, cliquez sur "créer un nouveau serveur"
-Donnez lui un nom puis aller dans l'onglet "connexion" pour mettre en nom "db", en utilisateur "dbuser" et en mot de passe "dbpass" puis cliquez sur "save".
+
+Une fois connecté, cliquez sur "créer un nouveau serveur",
+donnez lui un nom puis aller dans l'onglet "connexion" pour mettre en nom "db", en utilisateur "dbuser" et en mot de passe "dbpass" puis cliquez sur "save".
+
 Vous pouvez maintenat ouvrir le serveur que vous avez nommé où se trouvera la base de donnée nommée "NetStream" !
 
 En allant dans "Schémas" puis "public" vous trouverez les "tables" et en ouvrant chaque tables, vous y trouverez leurs colonnes.
+
 Vous pouvez aussi faire clique droit sur la base de donnée "NetStream" puis cliquer sur CREATE SCRIPT afin de tester la base de données avec des commandes SQL.
 
 ## Quelques requêtes SQL :
