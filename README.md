@@ -98,3 +98,22 @@ SELECT name_actor, firstname_actor, dob_actor FROM actors
 WHERE dob_actor <= '1993/12/21'
 ORDER BY name_actor;
 ```
+
+Pour afficher la liste des films pour un acteur/actrice donné :
+
+```sql
+-- Remplacez 'Mark' et 'Hamill' par le nom et le prénom de l'acteur/actrice recherché(e)
+SELECT
+    movies.title_movie,
+    movies.time_movie,
+    movies.date_movie
+FROM
+    movies
+JOIN
+    playing ON movies.id_movie = playing.id_movie
+JOIN
+    actors ON playing.id_actor = actors.id_actor
+WHERE
+    actors.firstname_actor = 'Mark' AND actors.name_actor = 'Hamill';
+
+```
